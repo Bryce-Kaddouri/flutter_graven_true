@@ -14,11 +14,11 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
           Text(
-            "Bienvenue in my first app",
+            "Welcome in my first app",
             style: TextStyle(fontSize: 42),
           ),
           Text(
-            "salon de bryce du 21 au 27 2022",
+            "saloon of bryce from 01/01/2023 to 01/02/2023",
             style: TextStyle(
               fontSize: 24,
             ),

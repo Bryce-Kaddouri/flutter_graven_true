@@ -12,20 +12,20 @@ class _EventPageState extends State<EventPage> {
   final events = [
     {
       "speaker": "Bryce Kaddouri",
-      "date": "13h à 13h30",
-      "subject": "Le code Legacy",
+      "date": "from 07:30 AM to 10 AM",
+      "subject": "the Legacy code",
       "avatar": "lior",
     },
     {
       "speaker": "Brayan Kaddouri",
-      "date": "17h à 17h30",
+      "date": "from 10 AM to 02:30 PM",
       "subject": "git blame --no-offense",
       "avatar": "damien",
     },
     {
       "speaker": "Defend Intelligence",
-      "date": "18h à 18h30",
-      "subject": "A la découverte de la blockchain",
+      "date": "from 02:30 PM to 06:30 PM",
+      "subject": "Discovering the blockchain",
       "avatar": "defendinteligence",
     }
   ];
@@ -42,10 +42,10 @@ class _EventPageState extends State<EventPage> {
           final subject = event["subject"];
           return Card(
             child: ListTile(
-              leading: FlutterLogo(size: 56.0),
+              leading: const FlutterLogo(size: 56.0),
               title: Text('$speaker ($date)'),
               subtitle: Text('$subject'),
-              trailing: Icon(Icons.more_vert),
+              trailing: const Icon(Icons.more_vert),
             ),
           );
         },
