@@ -33,8 +33,8 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: [
             const Text("Home"),
-            const Text("Planning"),
-            const Text("Add event"),
+            const Text("Events List"),
+            const Text("Add Event"),
           ][_currentIndex],
         ),
         body: const [
@@ -57,11 +57,11 @@ class _MyAppState extends State<MyApp> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_month),
-              label: "Planning",
+              label: "Events List",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.add_circle_outline),
-              label: "Add event",
+              label: "Add Event",
             ),
           ],
         ),

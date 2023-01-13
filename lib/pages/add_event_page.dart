@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter_application_1/pages/event_page.dart';
 
+// import 'package:flutter_application_1/pages/event_page.dart';
+
 // importer event_page.dart pour recuperer la liste des evenements
 
 class AddEventPage extends StatefulWidget {
@@ -130,6 +132,9 @@ class _AddEventPageState extends State<AddEventPage> {
                       "date": selectedConfDate,
                     };
 
+                    // use the callback function to add the new event to the list of events in the home page (parent) widget
+                    addEvent(context, newEvent);
+
                     // redirect to the home page (parent) widget
 
                     // add the new event to the list of events in the home page (parent) widget (to refresh the list) and close the modal sheet (to go back to the home page)
@@ -149,4 +154,7 @@ class _AddEventPageState extends State<AddEventPage> {
       ),
     );
   }
+
+  addEvent(BuildContext context, Map<String, Object> newEvent) =>
+      EventPage.of(context).addEventCallback(newEvent);
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DetailEvent extends StatefulWidget {
+// ignore: must_be_immutable
+class DetailEvent extends StatelessWidget {
   String nameEvent;
   String authorEvent;
   String typeEvent;
@@ -15,11 +16,6 @@ class DetailEvent extends StatefulWidget {
   });
 
   @override
-  State<DetailEvent> createState() => _DetailEventState();
-}
-
-class _DetailEventState extends State<DetailEvent> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -29,10 +25,11 @@ class _DetailEventState extends State<DetailEvent> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Name: ${widget.nameEvent}'),
-            Text('Author: ${widget.authorEvent}'),
-            Text('Type: ${widget.typeEvent}'),
-            Text('Date: ${widget.dateEvent}'),
+            Text('Name: $nameEvent'),
+            Text('Author: $authorEvent'),
+            Text('Type: $typeEvent'),
+            Text('Date: $dateEvent'),
+            const Text('test cest juste pour qssier'),
           ],
         ),
       ),
