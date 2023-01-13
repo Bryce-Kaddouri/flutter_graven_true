@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:date_field/date_field.dart';
+import 'package:flutter_application_1/pages/event_page.dart';
+
+// importer event_page.dart pour recuperer la liste des evenements
 
 class AddEventPage extends StatefulWidget {
   const AddEventPage({super.key});
@@ -120,16 +123,22 @@ class _AddEventPageState extends State<AddEventPage> {
                     final confNameEvent = confNameEventCtrl.text;
                     final confNameAuthor = confNameAuthorCtrl.text;
 
+                    var newEvent = {
+                      "nameEvent": confNameEvent,
+                      "author": confNameAuthor,
+                      "type": selectedEventType,
+                      "date": selectedConfDate,
+                    };
+
+                    // redirect to the home page (parent) widget
+
+                    // add the new event to the list of events in the home page (parent) widget (to refresh the list) and close the modal sheet (to go back to the home page)
+
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text("Send in progress..."),
                       ),
                     );
-
-                    print(
-                        "confNameEvent: $confNameEvent et confNameAuthor: $confNameAuthor");
-                    print("selectedEventType: $selectedEventType");
-                    print("selectedConfDate: $selectedConfDate");
                   }
                 },
                 label: const Text("Save event"),
