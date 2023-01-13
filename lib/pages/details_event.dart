@@ -33,6 +33,7 @@ class _DetailEventState extends State<DetailEvent> {
             Text('Author: ${widget.authorEvent}'),
             Text('Type: ${widget.typeEvent}'),
             Text('Date: ${widget.dateEvent}'),
+            Text('Name: ${widget.nameEvent}'),
           ],
         ),
       ),
